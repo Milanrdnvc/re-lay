@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.402" height="88.283" viewBox="0 0 88.402 88.283">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.291" cy="0.998" r="1.01" gradientTransform="translate(0.001)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffd776"/>
+      <stop offset="0.25" stop-color="#f3a554"/>
+      <stop offset="0.38" stop-color="#f15c3c"/>
+      <stop offset="0.7" stop-color="#c32f87"/>
+      <stop offset="0.95" stop-color="#6765ae"/>
+      <stop offset="0.99" stop-color="#5c6cb3"/>
+    </radialGradient>
+  </defs>
+  <g id="insta_logo" data-name="insta logo" transform="translate(34.306 -62.827) rotate(14)">
+    <g id="Layer_1" data-name="Layer 1" transform="translate(-1 65)">
+      <path id="Path_328" data-name="Path 328" d="M72.958,56.882A15.913,15.913,0,0,1,57.085,72.8H15.873A15.913,15.913,0,0,1,0,56.882V15.954A15.913,15.913,0,0,1,15.873,0H57.085A15.913,15.913,0,0,1,72.958,15.954Z" transform="translate(0)" fill="url(#radial-gradient)"/>
+      <rect id="Rectangle_26" data-name="Rectangle 26" width="48.986" height="50.449" rx="10.01" transform="translate(11.986 11.255)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4.41"/>
+      <path id="Path_329" data-name="Path 329" d="M42.1,30.027a12.026,12.026,0,0,1-24.053,0A11.891,11.891,0,0,1,30.077,18C38.162,18.23,42.252,23.418,42.1,30.027Z" transform="translate(6.396 6.378)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5.39"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="3.372" cy="3.372" r="3.372" transform="translate(47.916 18.162)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
