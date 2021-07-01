@@ -54,7 +54,7 @@ p {
 header {
   display: flex;
   background-color: var(--color-secondary);
-  height: 12vh;
+  height: 80px;
   position: sticky;
   top: 0;
   justify-content: space-between;
@@ -143,16 +143,19 @@ header {
 }
 
 .hero {
-  min-height: calc(88vh - 8rem);
-  margin-top: 8rem;
-  align-items: center;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  background-image: url("../pictures/background-1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__text {
     padding: 1.1rem;
     text-align: center;
     color: var(--color-primary);
+    position: relative;
+    top: 30px;
   }
 
   &__cta {
@@ -168,26 +171,18 @@ header {
 
   img {
     position: absolute;
-    z-index: -1;
   }
 
   img:nth-child(2) {
     width: 100px;
     right: 0;
-    bottom: 50px;
+    bottom: 140px;
   }
 
   img:nth-child(3) {
     width: 100px;
     left: 0;
-    bottom: 30px;
-  }
-
-  img:last-child {
-    width: 210%;
-    left: -50%;
-    bottom: 0;
-    z-index: -2;
+    bottom: 110px;
   }
 }
 
