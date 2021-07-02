@@ -188,8 +188,10 @@ header .blur-bg {
 .services {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   color: var(--color-tertiary);
+  margin-top: -100px;
 }
 .services__cards {
   padding: 1.1rem;
