@@ -1,7 +1,7 @@
 const burger = document.querySelector(".burger");
 const closeBtn = document.querySelector(".close-btn");
 const nav = document.querySelector("nav");
-const header = document.querySelector("header");
+const header = document.querySelector(".header__wrapper");
 const blurBg = document.querySelector(".blur-bg");
 let navOn = false;
 
@@ -20,10 +20,8 @@ closeBtn.addEventListener("click", () => {
 addEventListener("scroll", () => {
   if (navOn) return;
   if (scrollY > 100) {
-    console.log("test");
     header.style.boxShadow = "1px 17px 21px -6px rgba(0,0,0,0.17)";
   } else {
-    console.log("test2");
     header.style.boxShadow = "";
   }
 });

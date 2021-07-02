@@ -58,16 +58,18 @@ p {
 }
 
 header {
-  display: flex;
-  background-color: var(--color-secondary);
   height: 80px;
+  background-color: var(--color-secondary);
   position: sticky;
   top: 0;
+  z-index: 10;
+}
+header .header__wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem;
   transition: box-shadow 250ms ease-in-out;
-  z-index: 10;
 }
 header .logo img:last-child {
   display: none;
@@ -137,8 +139,10 @@ header .blur-bg {
   background-position: center;
   background-repeat: no-repeat;
 }
-.hero__text {
+.hero__wrapper {
   padding: 1.1rem;
+}
+.hero__text {
   text-align: center;
   color: var(--color-primary);
 }
@@ -158,31 +162,32 @@ header .blur-bg {
 }
 .hero img {
   position: absolute;
+  width: 100px;
 }
 .hero img:nth-child(2) {
-  width: 100px;
   right: 0;
   bottom: 140px;
 }
 .hero img:nth-child(3) {
-  width: 100px;
   left: 0;
   bottom: 110px;
 }
 
 .about {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../pictures/background-2.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+.about__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.1rem;
+}
 .about__text {
   color: var(--color-secondary);
-  padding: 1.1rem;
   text-align: center;
 }
 .about img:nth-child(2) {
@@ -190,16 +195,21 @@ header .blur-bg {
 }
 
 .services {
+  margin-top: -100px;
+}
+.services__wrapper {
   text-align: center;
+  color: var(--color-tertiary);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: var(--color-tertiary);
-  margin-top: -100px;
+  padding: 1.1rem;
 }
 .services__cards {
-  padding: 1.1rem;
   margin-top: 3rem;
+}
+.services__card-paragraph {
+  margin-top: 1.2rem;
 }
 .services__card {
   margin-bottom: 8rem;
@@ -242,7 +252,10 @@ header .blur-bg {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.pricing__wrapper {
   text-align: center;
+  padding: 1.1rem;
 }
 .pricing__cards {
   display: flex;
@@ -250,7 +263,7 @@ header .blur-bg {
   justify-content: center;
 }
 .pricing__card {
-  margin: 2rem;
+  margin: 2rem 0;
 }
 .pricing__card ul {
   margin: 0;

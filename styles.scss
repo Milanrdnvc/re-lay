@@ -59,16 +59,19 @@ p {
 }
 
 header {
-  display: flex;
-  background-color: var(--color-secondary);
   height: 80px;
+  background-color: var(--color-secondary);
   position: sticky;
   top: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.3rem;
-  transition: box-shadow 250ms ease-in-out;
   z-index: 10;
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem;
+    transition: box-shadow 250ms ease-in-out;
+  }
 
   .logo {
     img:last-child {
@@ -148,7 +151,6 @@ header {
     z-index: -1;
   }
 }
-
 .hero {
   min-height: 100vh;
   position: relative;
@@ -157,8 +159,11 @@ header {
   background-position: center;
   background-repeat: no-repeat;
 
-  &__text {
+  &__wrapper {
     padding: 1.1rem;
+  }
+
+  &__text {
     text-align: center;
     color: var(--color-primary);
   }
@@ -181,16 +186,15 @@ header {
 
   img {
     position: absolute;
+    width: 100px;
   }
 
   img:nth-child(2) {
-    width: 100px;
     right: 0;
     bottom: 140px;
   }
 
   img:nth-child(3) {
-    width: 100px;
     left: 0;
     bottom: 110px;
   }
@@ -198,17 +202,20 @@ header {
 
 .about {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../pictures/background-2.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.1rem;
+  }
+
   &__text {
     color: var(--color-secondary);
-    padding: 1.1rem;
     text-align: center;
   }
 
@@ -218,16 +225,23 @@ header {
 }
 
 .services {
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: var(--color-tertiary);
   margin-top: -100px;
 
-  &__cards {
+  &__wrapper {
+    text-align: center;
+    color: var(--color-tertiary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 1.1rem;
+  }
+
+  &__cards {
     margin-top: 3rem;
+  }
+
+  &__card-paragraph {
+    margin-top: 1.2rem;
   }
 
   &__card {
@@ -280,7 +294,11 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  text-align: center;
+
+  &__wrapper {
+    text-align: center;
+    padding: 1.1rem;
+  }
 
   &__cards {
     display: flex;
@@ -289,7 +307,7 @@ header {
   }
 
   &__card {
-    margin: 2rem;
+    margin: 2rem 0;
 
     ul {
       margin: 0;
