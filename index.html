@@ -215,27 +215,34 @@
         <div class="contact__wrapper">
           <h2 class="contact__title">Kontaktirajte nas</h2>
           <form class="contact__form">
-            <label for="name">Vaše ime</label>
-            <input type="text" id="name" />
-            <label for="surname">Vaše prezime</label>
-            <input type="text" id="surname" />
-            <label for="email">Vaš email</label>
-            <input type="email" id="email" />
-            <label for="company">Naziv vašeg preduzeća, kompanije...</label>
-            <input type="text" id="company" />
-            <label for="message">Vaša poruka</label>
-            <textarea id="message"></textarea>
+            <div class="contact__personal-info">
+              <label for="name">Vaše ime</label>
+              <input type="text" id="name" /><br />
+              <label for="surname">Vaše prezime</label>
+              <input type="text" id="surname" />
+            </div>
+            <div class="contact__business-info">
+              <label for="email">Vaš email</label>
+              <input type="email" id="email" />
+              <label for="company">Naziv vašeg preduzeća, kompanije...</label>
+              <input type="text" id="company" />
+            </div>
+            <div class="contact__message">
+              <label for="message">Vaša poruka</label>
+              <textarea id="message" rows="5"></textarea>
+            </div>
             <button type="submit">Pošalji</button>
           </form>
           <img src="./pictures/facebook-logo.svg" alt="facebook logo" />
           <img src="./pictures/instagram-logo.svg" alt="instagram logo" />
           <img src="./pictures/discord-logo.svg" alt="discord logo" />
-          <img src="./pictures/duck.svg" alt="duck" />
+          <img src="./pictures/phone-duck.svg" alt="duck" />
         </div>
       </section>
     </main>
     <footer>
       <div class="footer__wrapper">
+        <img src="./pictures/phone-duck.svg" alt="duck" />
         <div class="sections">
           <ul>
             <li><a href="#">O nama</a></li>
@@ -245,7 +252,7 @@
           </ul>
         </div>
         <div class="copyright">Copyright &copy; RE:LAY</div>
-        <div class="contact">
+        <div class="contact-info">
           <h4>relaywebdigital@gmail.com</h4>
           <div>
             <img
