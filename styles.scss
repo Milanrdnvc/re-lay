@@ -276,23 +276,20 @@ header {
 }
 
 .pricing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  background-image: url("../pictures/background-3.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  & > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-50%);
-    z-index: -2;
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__card {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin: 2rem;
 
     ul {
       margin: 0;
