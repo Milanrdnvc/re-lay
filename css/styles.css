@@ -309,6 +309,7 @@ header .blur-bg {
   color: var(--color-primary);
   text-align: center;
   padding: 1rem 0;
+  font-size: var(--font-medium);
 }
 .pricing__card-price {
   font-size: var(--font-large);
