@@ -261,6 +261,9 @@ header .blur-bg {
   text-align: center;
   padding: 1.1rem;
 }
+.pricing__title {
+  color: var(--color-tertiary);
+}
 .pricing__cards {
   display: flex;
   flex-wrap: wrap;
@@ -328,6 +331,7 @@ header .blur-bg {
 }
 .contact__title {
   font-size: calc(var(--font-large) - 3px);
+  color: var(--color-tertiary);
 }
 .contact__form {
   margin-bottom: 3rem;

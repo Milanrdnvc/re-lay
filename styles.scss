@@ -304,6 +304,10 @@ header {
     padding: 1.1rem;
   }
 
+  &__title {
+    color: var(--color-tertiary);
+  }
+
   &__cards {
     display: flex;
     flex-wrap: wrap;
@@ -382,6 +386,7 @@ header {
 
   &__title {
     font-size: calc(var(--font-large) - 3px);
+    color: var(--color-tertiary);
   }
 
   &__form {
