@@ -154,8 +154,6 @@ header {
     padding: 1.1rem;
     text-align: center;
     color: var(--color-primary);
-    position: relative;
-    top: 30px;
   }
 
   &__cta {
@@ -187,13 +185,14 @@ header {
 }
 
 .about {
-  min-height: 120vh;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-image: url("../pictures/background-2.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__text {
     color: var(--color-secondary);

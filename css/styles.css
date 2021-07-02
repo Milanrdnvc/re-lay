@@ -134,8 +134,6 @@ header .blur-bg {
   padding: 1.1rem;
   text-align: center;
   color: var(--color-primary);
-  position: relative;
-  top: 30px;
 }
 .hero__cta {
   color: var(--color-secondary);
@@ -162,13 +160,14 @@ header .blur-bg {
 }
 
 .about {
-  min-height: 120vh;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-image: url("../pictures/background-2.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .about__text {
   color: var(--color-secondary);
