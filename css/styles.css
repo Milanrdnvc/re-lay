@@ -277,8 +277,25 @@ p {
   color: var(--color-secondary);
   text-align: center;
 }
-.about img:nth-child(2) {
+.about img {
   width: 250px;
+  margin-top: 2rem;
+}
+@media (min-width: 950px) {
+  .about__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .about__text {
+    margin-top: 5rem;
+    max-width: 425px;
+    text-align: left;
+  }
+  .about img {
+    margin-top: 5rem;
+    width: 450px;
+  }
 }
 
 .services {

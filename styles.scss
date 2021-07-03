@@ -317,8 +317,28 @@ p {
     text-align: center;
   }
 
-  img:nth-child(2) {
+  img {
     width: 250px;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 950px) {
+    &__wrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+
+    &__text {
+      margin-top: 5rem;
+      max-width: 425px;
+      text-align: left;
+    }
+
+    img {
+      margin-top: 5rem;
+      width: 450px;
+    }
   }
 }
 
