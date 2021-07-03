@@ -471,6 +471,7 @@ p {
       text-decoration: none;
       color: var(--color-secondary);
       font-weight: 600;
+      font-size: var(--font-small);
     }
   }
 
@@ -495,6 +496,7 @@ p {
   &__copyright {
     text-align: center;
     color: var(--color-secondary);
+    font-size: var(--font-medium);
     font-weight: 600;
     margin-top: 3rem;
   }
