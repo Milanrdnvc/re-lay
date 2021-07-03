@@ -57,27 +57,27 @@ p {
   font-size: var(--font-x-small);
 }
 
-header {
+.header {
   height: 80px;
   background-color: var(--color-secondary);
   position: sticky;
   top: 0;
   z-index: 10;
 }
-header .header__wrapper {
+.header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem;
   transition: box-shadow 250ms ease-in-out;
 }
-header .logo img:last-child {
+.header .logo img:last-child {
   display: none;
 }
-header .logo img {
+.header .logo img {
   width: 130px;
 }
-header nav {
+.header nav {
   position: fixed;
   background: #020024;
   background: linear-gradient(135deg, #020024 0%, #8b34bd 100%, #00d4ff 100%);
@@ -87,23 +87,23 @@ header nav {
   width: 60%;
   display: none;
 }
-header nav ul {
+.header nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: right;
 }
-header nav ul li {
+.header nav ul li {
   padding: 2rem;
   text-align: right;
 }
-header nav ul li:last-child a {
+.header nav ul li:last-child a {
   background-color: var(--color-secondary);
   padding: 0.2rem;
   border-radius: 10px;
   color: var(--color-primary);
 }
-header nav ul a {
+.header nav ul a {
   color: var(--color-secondary);
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
@@ -111,16 +111,16 @@ header nav ul a {
   font-size: var(--font-medium);
   text-transform: uppercase;
 }
-header nav .close-btn {
+.header nav .close-btn {
   padding-right: 1rem;
   padding-top: 1rem;
   cursor: pointer;
 }
-header .burger {
+.header .burger {
   width: 35px;
   cursor: pointer;
 }
-header .blur-bg {
+.header .blur-bg {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -326,7 +326,7 @@ header .blur-bg {
   position: relative;
 }
 .contact__wrapper {
-  padding: 1.1rem 1.1rem 0 1.1rem;
+  padding: 1.1rem;
   text-align: center;
 }
 .contact__title {
@@ -377,6 +377,53 @@ header .blur-bg {
 }
 .contact img:last-child {
   display: none;
+}
+
+.footer {
+  background-color: #0a0837;
+  position: relative;
+  margin-top: 200px;
+}
+.footer__wrapper > img:first-child {
+  position: absolute;
+  top: -180px;
+  right: 0;
+}
+.footer__wrapper {
+  padding: 1.1rem;
+}
+.footer__sections ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.footer__sections li {
+  margin: 0.8rem 0;
+}
+.footer__sections a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+.footer__contact-info {
+  color: white;
+  margin-top: 3rem;
+}
+.footer__contact-info div {
+  display: flex;
+  align-items: center;
+}
+.footer__contact-info a {
+  margin-right: 1rem;
+}
+.footer__contact-info img {
+  cursor: pointer;
+}
+.footer__copyright {
+  text-align: center;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
