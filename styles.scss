@@ -438,8 +438,9 @@ p {
 
   &__cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &__card {
@@ -501,6 +502,16 @@ p {
     font-weight: 600;
     padding: 1rem 0;
     text-align: center;
+  }
+
+  @media (min-width: 950px) {
+    &__cards {
+      flex-direction: row;
+    }
+
+    &__card:first-child {
+      margin-right: 4rem;
+    }
   }
 }
 

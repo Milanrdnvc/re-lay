@@ -379,8 +379,9 @@ p {
 }
 .pricing__cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .pricing__card {
   margin: 2rem 0;
@@ -433,6 +434,14 @@ p {
   font-weight: 600;
   padding: 1rem 0;
   text-align: center;
+}
+@media (min-width: 950px) {
+  .pricing__cards {
+    flex-direction: row;
+  }
+  .pricing__card:first-child {
+    margin-right: 4rem;
+  }
 }
 
 .contact {
