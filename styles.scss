@@ -706,8 +706,23 @@ p {
   }
 
   @media (min-width: 950px) {
+    &__wrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
     &__wrapper > img:first-child {
       display: none;
+    }
+
+    &__wrapper > div:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__contact-info > div {
+      justify-content: center;
     }
   }
 }

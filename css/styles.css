@@ -601,8 +601,20 @@ p {
   margin-top: 3rem;
 }
 @media (min-width: 950px) {
+  .footer__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
   .footer__wrapper > img:first-child {
     display: none;
+  }
+  .footer__wrapper > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__contact-info > div {
+    justify-content: center;
   }
 }
 
