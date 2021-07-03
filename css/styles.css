@@ -304,9 +304,6 @@ p {
 .services__wrapper {
   text-align: center;
   color: var(--color-tertiary);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 1.1rem;
 }
 .services__cards {
@@ -348,6 +345,22 @@ p {
 }
 .services img:first-child {
   margin-bottom: 2rem;
+}
+@media (min-width: 950px) {
+  .services {
+    margin: 0 0 10rem 0;
+  }
+  .services__cards {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+  .services__card {
+    max-width: 350px;
+    margin: 3rem 4rem;
+  }
 }
 
 .pricing {
