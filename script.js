@@ -4,6 +4,15 @@ const nav = document.querySelector("nav");
 const header = document.querySelector(".header");
 const blurBg = document.querySelector(".blur-bg");
 
+addEventListener("mousemove", (e) => {
+  document.querySelectorAll("[data-speed]").forEach((layer) => {
+    const speed = layer.getAttribute("data-speed");
+    const x = (window.innerWidth - e.pageX * speed) / 1000;
+    const y = (window.innerHeight - e.pageY * speed) / 1000;
+    layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+});
+
 burger.addEventListener("click", () => {
   nav.style.display = "block";
   blurBg.style.display = "block";
