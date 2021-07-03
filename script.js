@@ -1,7 +1,7 @@
 const burger = document.querySelector(".burger");
 const closeBtn = document.querySelector(".close-btn");
 const nav = document.querySelector("nav");
-const header = document.querySelector(".header__wrapper");
+const header = document.querySelector(".header");
 const blurBg = document.querySelector(".blur-bg");
 let navOn = false;
 

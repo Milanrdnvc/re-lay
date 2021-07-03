@@ -64,13 +64,13 @@ p {
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: box-shadow 250ms ease-in-out;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.3rem;
-    transition: box-shadow 250ms ease-in-out;
   }
 
   .logo {
@@ -150,7 +150,67 @@ p {
     display: none;
     z-index: -1;
   }
+
+  @media (min-width: 950px) {
+    .burger {
+      display: none;
+    }
+
+    &__wrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo > img:last-child {
+      display: inline;
+      width: 60px;
+      margin-left: 1.2rem;
+    }
+
+    nav {
+      position: static;
+      display: block;
+      background: transparent;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        img {
+          display: none;
+        }
+
+        li {
+          padding: 0 0.8rem;
+
+          @media (min-width: 1450px) {
+            padding: 0 3rem;
+          }
+        }
+
+        li:last-child {
+          padding-right: 0;
+
+          a {
+            background-color: var(--color-tertiary);
+            color: var(--color-secondary);
+          }
+        }
+
+        a {
+          color: var(--color-tertiary);
+        }
+      }
+    }
+  }
 }
+
 .hero {
   min-height: 100vh;
   position: relative;

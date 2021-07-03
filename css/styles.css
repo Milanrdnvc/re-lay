@@ -63,13 +63,13 @@ p {
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: box-shadow 250ms ease-in-out;
 }
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem;
-  transition: box-shadow 250ms ease-in-out;
 }
 .header .logo img:last-child {
   display: none;
@@ -129,6 +129,59 @@ p {
   background-color: rgba(0, 0, 0, 0.35);
   display: none;
   z-index: -1;
+}
+@media (min-width: 950px) {
+  .header .burger {
+    display: none;
+  }
+  .header__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  .header .logo > img:last-child {
+    display: inline;
+    width: 60px;
+    margin-left: 1.2rem;
+  }
+  .header nav {
+    position: static;
+    display: block;
+    background: transparent;
+  }
+  .header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  .header nav ul img {
+    display: none;
+  }
+  .header nav ul li {
+    padding: 0 0.8rem;
+  }
+}
+@media (min-width: 950px) and (min-width: 1450px) {
+  .header nav ul li {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 950px) {
+  .header nav ul li:last-child {
+    padding-right: 0;
+  }
+  .header nav ul li:last-child a {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+  }
+}
+@media (min-width: 950px) {
+  .header nav ul a {
+    color: var(--color-tertiary);
+  }
 }
 
 .hero {
