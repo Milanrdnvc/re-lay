@@ -350,6 +350,10 @@ p {
   .services {
     margin: 0 0 10rem 0;
   }
+  .services__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
   .services__cards {
     display: flex;
     width: 100%;
@@ -436,6 +440,10 @@ p {
   text-align: center;
 }
 @media (min-width: 950px) {
+  .pricing__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
   .pricing__cards {
     flex-direction: row;
   }
@@ -446,10 +454,10 @@ p {
 
 .contact {
   position: relative;
+  text-align: center;
 }
 .contact__wrapper {
   padding: 1.1rem;
-  text-align: center;
 }
 .contact__title {
   font-size: calc(var(--font-large) - 3px);
@@ -500,6 +508,49 @@ p {
 .contact img:last-child {
   display: none;
 }
+@media (min-width: 950px) {
+  .contact__wrapper {
+    max-width: 1600px;
+    margin: auto;
+  }
+  .contact__form {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .contact__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact__personal-info, .contact__business-info {
+    flex: 1;
+  }
+  .contact__personal-info {
+    margin-right: 1rem;
+  }
+  .contact img:last-child {
+    display: inline;
+    position: absolute;
+  }
+  .contact img {
+    position: absolute;
+  }
+  .contact img:nth-child(2) {
+    top: 0;
+    left: 10%;
+  }
+  .contact img:nth-child(3) {
+    bottom: -10%;
+    left: 10%;
+  }
+  .contact img:nth-child(4) {
+    top: 0;
+    right: 10%;
+  }
+  .contact img:nth-child(5) {
+    bottom: -30%;
+    right: 10%;
+  }
+}
 
 .footer {
   background-color: #0a0837;
@@ -548,6 +599,11 @@ p {
   font-size: var(--font-medium);
   font-weight: 600;
   margin-top: 3rem;
+}
+@media (min-width: 950px) {
+  .footer__wrapper > img:first-child {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

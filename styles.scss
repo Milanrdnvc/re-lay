@@ -405,6 +405,11 @@ p {
   @media (min-width: 950px) {
     margin: 0 0 10rem 0;
 
+    &__wrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
     &__cards {
       display: flex;
       width: 100%;
@@ -505,6 +510,11 @@ p {
   }
 
   @media (min-width: 950px) {
+    &__wrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
     &__cards {
       flex-direction: row;
     }
@@ -517,10 +527,10 @@ p {
 
 .contact {
   position: relative;
+  text-align: center;
 
   &__wrapper {
     padding: 1.1rem;
-    text-align: center;
   }
 
   &__title {
@@ -577,6 +587,61 @@ p {
 
   img:last-child {
     display: none;
+  }
+
+  @media (min-width: 950px) {
+    &__wrapper {
+      max-width: 1600px;
+      margin: auto;
+    }
+
+    &__form {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__personal-info,
+    &__business-info {
+      flex: 1;
+    }
+
+    &__personal-info {
+      margin-right: 1rem;
+    }
+
+    img:last-child {
+      display: inline;
+      position: absolute;
+    }
+
+    img {
+      position: absolute;
+    }
+
+    img:nth-child(2) {
+      top: 0;
+      left: 10%;
+    }
+
+    img:nth-child(3) {
+      bottom: -10%;
+      left: 10%;
+    }
+
+    img:nth-child(4) {
+      top: 0;
+      right: 10%;
+    }
+
+    img:nth-child(5) {
+      bottom: -30%;
+      right: 10%;
+    }
   }
 }
 
@@ -638,5 +703,11 @@ p {
     font-size: var(--font-medium);
     font-weight: 600;
     margin-top: 3rem;
+  }
+
+  @media (min-width: 950px) {
+    &__wrapper > img:first-child {
+      display: none;
+    }
   }
 }
