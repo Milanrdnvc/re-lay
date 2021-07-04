@@ -166,7 +166,7 @@ p {
   .header nav ul {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
   }
   .header nav ul img {
     display: none;
@@ -483,6 +483,7 @@ header .blur-bg.active {
 .contact__personal-info, .contact__business-info, .contact__message {
   display: flex;
   flex-direction: column;
+  height: 100%;
   font-weight: 600;
   color: var(--color-tertiary);
 }
