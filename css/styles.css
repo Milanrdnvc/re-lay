@@ -302,9 +302,6 @@ p {
   }
 }
 
-.services {
-  margin-top: -100px;
-}
 .services__wrapper {
   text-align: center;
   color: var(--color-tertiary);
