@@ -93,9 +93,9 @@ p {
   background: #020024;
   background: linear-gradient(135deg, #020024 0%, #8b34bd 100%, #00d4ff 100%);
   right: 0;
-  bottom: 0;
   top: 0;
   width: 60%;
+  height: 100%;
   display: none;
 }
 .header nav ul {
