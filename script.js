@@ -1,8 +1,8 @@
 const burger = document.querySelector(".burger");
-const closeBtn = document.querySelector(".close-btn");
 const nav = document.querySelector("nav");
 const header = document.querySelector(".header");
 const blurBg = document.querySelector(".blur-bg");
+const closeBtn = document.querySelector(".close-btn");
 const contactForm = document.querySelector(".contact__form");
 
 function parallax(e) {
@@ -23,13 +23,13 @@ contactForm.addEventListener("submit", e => {
 
 // toggle navbar
 burger.addEventListener("click", () => {
-  nav.style.display = "block";
-  blurBg.style.display = "block";
+  nav.classList.add("active");
+  blurBg.classList.add("active");
 });
 
 closeBtn.addEventListener("click", () => {
-  nav.style.display = "none";
-  blurBg.style.display = "none";
+  nav.classList.remove("active");
+  blurBg.classList.remove("active");
 });
 
 // add parallax effect
@@ -47,14 +47,11 @@ addEventListener("resize", () => {
   }
 });
 
-// display navbar normally when on bigger screens and remove blurred background; else don't display it
+// when on bigger screens, remove active classes from navbar and blurred background
 addEventListener("resize", () => {
-  if (document.body.offsetWidth >= 950) {
-    nav.style.display = "block";
-    blurBg.style.display = "none";
-  } else {
-    nav.style.display = "none";
-  }
+  if (!document.body.offsetWidth >= 950) return;
+  nav.classList.remove("active");
+  blurBg.classList.remove("active");
 });
 
 // add shadow to the bottom of the header if we scroll
