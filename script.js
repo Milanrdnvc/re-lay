@@ -3,6 +3,7 @@ const closeBtn = document.querySelector(".close-btn");
 const nav = document.querySelector("nav");
 const header = document.querySelector(".header");
 const blurBg = document.querySelector(".blur-bg");
+const contactForm = document.querySelector(".contact__form");
 
 function parallax(e) {
   if (document.body.offsetWidth < 950) return;
@@ -13,6 +14,12 @@ function parallax(e) {
     layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
 }
+
+// contact form submission
+contactForm.addEventListener("submit", e => {
+  e.preventDefault();
+  console.log("test...");
+});
 
 // toggle navbar
 burger.addEventListener("click", () => {
