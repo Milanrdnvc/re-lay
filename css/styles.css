@@ -535,6 +535,7 @@ header .blur-bg.active {
   .contact__info {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
   }
   .contact__personal-info, .contact__business-info {
     flex: 1;

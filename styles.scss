@@ -616,6 +616,7 @@ header .blur-bg.active {
     &__info {
       display: flex;
       justify-content: space-between;
+      align-items: stretch;
     }
 
     &__personal-info,
