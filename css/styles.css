@@ -269,6 +269,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: -3px;
 }
 .about__wrapper {
   display: flex;
