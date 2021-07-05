@@ -602,7 +602,17 @@ header .blur-bg.active {
     cursor: pointer;
   }
 
-  img:last-child {
+  a {
+    & > svg {
+      transition: filter 250ms ease-in-out;
+    }
+
+    & > svg:hover {
+      filter: drop-shadow(0px 0px 10px #621491);
+    }
+  }
+
+  a:last-child > img {
     display: none;
   }
 
@@ -632,31 +642,30 @@ header .blur-bg.active {
       margin-right: 1rem;
     }
 
-    img:last-child {
+    a:last-child > img {
       display: inline;
+    }
+
+    a {
       position: absolute;
     }
 
-    img {
-      position: absolute;
-    }
-
-    img:nth-child(2) {
+    a:nth-child(2) {
       top: 0;
       left: 10%;
     }
 
-    img:nth-child(3) {
+    a:nth-child(3) {
       bottom: -10%;
       left: 10%;
     }
 
-    img:nth-child(4) {
+    a:nth-child(4) {
       top: 0;
       right: 10%;
     }
 
-    img:nth-child(5) {
+    a:nth-child(5) {
       bottom: -30%;
       right: 10%;
     }

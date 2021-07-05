@@ -524,7 +524,13 @@ header .blur-bg.active {
   margin-top: 1rem;
   cursor: pointer;
 }
-.contact img:last-child {
+.contact a > svg {
+  transition: filter 250ms ease-in-out;
+}
+.contact a > svg:hover {
+  filter: drop-shadow(0px 0px 10px #621491);
+}
+.contact a:last-child > img {
   display: none;
 }
 @media (min-width: 950px) {
@@ -547,26 +553,25 @@ header .blur-bg.active {
   .contact__personal-info {
     margin-right: 1rem;
   }
-  .contact img:last-child {
+  .contact a:last-child > img {
     display: inline;
+  }
+  .contact a {
     position: absolute;
   }
-  .contact img {
-    position: absolute;
-  }
-  .contact img:nth-child(2) {
+  .contact a:nth-child(2) {
     top: 0;
     left: 10%;
   }
-  .contact img:nth-child(3) {
+  .contact a:nth-child(3) {
     bottom: -10%;
     left: 10%;
   }
-  .contact img:nth-child(4) {
+  .contact a:nth-child(4) {
     top: 0;
     right: 10%;
   }
-  .contact img:nth-child(5) {
+  .contact a:nth-child(5) {
     bottom: -30%;
     right: 10%;
   }
