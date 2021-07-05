@@ -92,11 +92,11 @@ p {
   position: fixed;
   background: #020024;
   background: linear-gradient(135deg, #020024 0%, #8b34bd 100%, #00d4ff 100%);
-  left: -100%;
+  right: -100%;
   top: 0;
   width: 60%;
   height: 100%;
-  transition: left 250ms ease-in-out;
+  transition: right 250ms ease-in-out;
 }
 .header nav ul {
   list-style-type: none;
@@ -196,7 +196,7 @@ p {
 }
 
 header nav.active {
-  left: 0;
+  right: 0;
 }
 
 header .blur-bg.active {
