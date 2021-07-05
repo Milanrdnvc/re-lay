@@ -73,6 +73,7 @@ p {
   transition: box-shadow 250ms ease-in-out;
   display: flex;
   align-items: center;
+  margin-top: 10px;
 
   &__wrapper {
     display: flex;
@@ -162,6 +163,8 @@ p {
   }
 
   @media (min-width: 950px) {
+    margin-top: 0;
+
     .burger {
       display: none;
     }
