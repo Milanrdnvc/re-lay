@@ -438,6 +438,8 @@ header .blur-bg.active {
 .pricing__card-feature img {
   position: absolute;
   left: -25px;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 .pricing__card--blurred-feature {
   opacity: 0.4;

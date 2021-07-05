@@ -501,6 +501,8 @@ header .blur-bg.active {
     img {
       position: absolute;
       left: -25px;
+      bottom: 50%;
+      transform: translateY(50%);
     }
   }
 
