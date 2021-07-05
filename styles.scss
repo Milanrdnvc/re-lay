@@ -612,7 +612,7 @@ header .blur-bg.active {
     }
   }
 
-  a:last-child > img {
+  img:last-child {
     display: none;
   }
 
@@ -642,11 +642,12 @@ header .blur-bg.active {
       margin-right: 1rem;
     }
 
-    a:last-child > img {
+    img:last-child {
       display: inline;
     }
 
-    a {
+    a,
+    img:last-child {
       position: absolute;
     }
 
@@ -665,7 +666,7 @@ header .blur-bg.active {
       right: 10%;
     }
 
-    a:nth-child(5) {
+    img:nth-child(5) {
       bottom: -30%;
       right: 10%;
     }

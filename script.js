@@ -7,7 +7,7 @@ const contactForm = document.querySelector(".contact__form");
 const navItems = document.querySelectorAll("header nav ul li");
 
 function parallax(e) {
-  if (document.body.offsetWidth < 950) return;
+  if (document.body.offsetWidth < 932) return;
   document.querySelectorAll("[data-speed]").forEach(layer => {
     const speed = layer.getAttribute("data-speed");
     const x = (window.innerWidth - e.pageX * speed) / 1000;
@@ -48,7 +48,8 @@ addEventListener("mousemove", parallax);
 
 // remove parallax effect for smaller devices
 addEventListener("resize", () => {
-  if (document.body.offsetWidth < 950) {
+  if (document.body.offsetWidth < 932) {
+    console.log("test");
     removeEventListener("mousemove", parallax);
     document.querySelectorAll("[data-speed]").forEach(layer => {
       layer.style.transform = "";
