@@ -524,6 +524,15 @@ header .blur-bg.active {
   margin-top: 1rem;
   cursor: pointer;
 }
+.contact a:nth-child(2) > svg {
+  transform: rotateZ(23deg);
+}
+.contact a:nth-child(3) > svg {
+  transform: rotateZ(-14deg);
+}
+.contact a:nth-child(4) > svg {
+  transform: rotateZ(-9deg);
+}
 .contact a > svg {
   transition: filter 250ms ease-in-out;
 }
@@ -564,13 +573,22 @@ header .blur-bg.active {
     top: 0;
     left: 10%;
   }
+  .contact a:nth-child(2) > svg {
+    transform: initial;
+  }
   .contact a:nth-child(3) {
     bottom: -10%;
     left: 10%;
   }
+  .contact a:nth-child(3) > svg {
+    transform: initial;
+  }
   .contact a:nth-child(4) {
     top: 0;
     right: 10%;
+  }
+  .contact a:nth-child(4) > svg {
+    transform: initial;
   }
   .contact img:nth-child(5) {
     bottom: -30%;

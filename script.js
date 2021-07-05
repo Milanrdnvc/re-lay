@@ -49,9 +49,8 @@ addEventListener("mousemove", parallax);
 // remove parallax effect for smaller devices
 addEventListener("resize", () => {
   if (document.body.offsetWidth < 932) {
-    console.log("test");
     removeEventListener("mousemove", parallax);
-    document.querySelectorAll("[data-speed]").forEach(layer => {
+    document.querySelectorAll("[data-speed]").forEach((layer, idx) => {
       layer.style.transform = "";
     });
   } else {

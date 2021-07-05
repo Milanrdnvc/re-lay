@@ -602,6 +602,18 @@ header .blur-bg.active {
     cursor: pointer;
   }
 
+  a:nth-child(2) > svg {
+    transform: rotateZ(23deg);
+  }
+
+  a:nth-child(3) > svg {
+    transform: rotateZ(-14deg);
+  }
+
+  a:nth-child(4) > svg {
+    transform: rotateZ(-9deg);
+  }
+
   a {
     & > svg {
       transition: filter 250ms ease-in-out;
@@ -654,16 +666,28 @@ header .blur-bg.active {
     a:nth-child(2) {
       top: 0;
       left: 10%;
+
+      & > svg {
+        transform: initial;
+      }
     }
 
     a:nth-child(3) {
       bottom: -10%;
       left: 10%;
+
+      & > svg {
+        transform: initial;
+      }
     }
 
     a:nth-child(4) {
       top: 0;
       right: 10%;
+
+      & > svg {
+        transform: initial;
+      }
     }
 
     img:nth-child(5) {
