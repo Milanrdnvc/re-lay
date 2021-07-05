@@ -14,6 +14,14 @@ html {
   }
 }
 
+html[lang=sr] #en {
+  opacity: 0.5;
+}
+
+html[lang=en] #sr {
+  opacity: 0.5;
+}
+
 :root {
   --color-primary: #60148f;
   --color-secondary: #ffffff;
@@ -112,7 +120,7 @@ p {
 }
 .header nav ul li:last-child a {
   background-color: var(--color-secondary);
-  padding: 0.2rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 10px;
   color: var(--color-primary);
 }
