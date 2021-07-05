@@ -4,6 +4,7 @@ const header = document.querySelector(".header");
 const blurBg = document.querySelector(".blur-bg");
 const closeBtn = document.querySelector(".close-btn");
 const contactForm = document.querySelector(".contact__form");
+const navItems = document.querySelectorAll("header nav ul li");
 
 function parallax(e) {
   if (document.body.offsetWidth < 950) return;
@@ -25,11 +26,21 @@ contactForm.addEventListener("submit", e => {
 burger.addEventListener("click", () => {
   nav.classList.add("active");
   blurBg.classList.add("active");
+  navItems.forEach((link, idx) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 250ms ease-in-out forwards ${
+        idx / 7
+      }s`;
+    }
+  });
 });
 
 closeBtn.addEventListener("click", () => {
   nav.classList.remove("active");
   blurBg.classList.remove("active");
+  navItems.forEach(link => (link.style.animation = ""));
 });
 
 // add parallax effect
@@ -47,11 +58,12 @@ addEventListener("resize", () => {
   }
 });
 
-// when on bigger screens, remove active classes from navbar and blurred background
+// when on bigger screens, remove active classes from navbar, blurred background, and remove nav links animtaion styles
 addEventListener("resize", () => {
-  if (!document.body.offsetWidth >= 950) return;
+  if (!(document.body.offsetWidth >= 950)) return;
   nav.classList.remove("active");
   blurBg.classList.remove("active");
+  navItems.forEach(link => (link.style.animation = ""));
 });
 
 // add shadow to the bottom of the header if we scroll

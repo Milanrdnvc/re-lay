@@ -116,6 +116,7 @@ p {
       li {
         padding: 2rem;
         text-align: right;
+        opacity: 0;
       }
 
       li:last-child {
@@ -197,6 +198,7 @@ p {
 
         li {
           padding: 0 0.8rem;
+          opacity: 1;
 
           @media (min-width: 1450px) {
             padding: 0 2rem;
@@ -738,5 +740,16 @@ header .blur-bg.active {
     &__contact-info > div {
       justify-content: center;
     }
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
