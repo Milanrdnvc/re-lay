@@ -594,6 +594,9 @@ header .blur-bg.active {
   .contact img:last-child {
     display: inline;
   }
+  .contact a > svg {
+    width: initial;
+  }
   .contact a,
 .contact img:last-child {
     position: absolute;
