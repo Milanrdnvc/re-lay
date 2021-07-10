@@ -5,6 +5,8 @@ const blurBg = document.querySelector(".blur-bg");
 const closeBtn = document.querySelector(".close-btn");
 const contactForm = document.querySelector(".contact__form");
 const navItems = document.querySelectorAll("header nav ul li");
+const lang = document.querySelector("html").getAttribute("lang");
+const formStatus = document.querySelector(".contact__status");
 
 function parallax(e) {
   if (document.body.offsetWidth < 932) return;
@@ -16,10 +18,76 @@ function parallax(e) {
   });
 }
 
+function validateForm({ name, surname, email, company, message }) {
+  let status = "";
+  const mailRegEx =
+    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+  if (!name)
+    status +=
+      lang === "sr"
+        ? "Molimo Vas unesite pravilno ime="
+        : "Please enter a valid name=";
+  if (!surname)
+    status +=
+      lang === "sr"
+        ? "Molimo Vas unesite pravilno prezime="
+        : "Please enter a valid surname=";
+  if (!email || !email.match(mailRegEx))
+    status +=
+      lang === "sr"
+        ? "Molimo Vas unesite pravilan e-mail="
+        : "Please enter a valid e-mail=";
+  if (!company)
+    status +=
+      lang === "sr"
+        ? "Molimo Vas unesite pravilan naziv kompanije="
+        : "Please enter a valid company name=";
+  if (!message)
+    status +=
+      lang === "sr"
+        ? "Molimo Vas unesite pravilnu poruku="
+        : "Please enter a valid message=";
+  return status || true;
+}
+
 // contact form submission
-contactForm.addEventListener("submit", e => {
+contactForm.addEventListener("submit", async e => {
   e.preventDefault();
-  console.log("test...");
+  const data = new FormData(e.target);
+  const endpoint = "https://formspree.io/f/mnqlbqgp";
+  const body = {
+    name: data.get("name"),
+    surname: data.get("surname"),
+    email: data.get("email"),
+    company: data.get("company"),
+    message: data.get("message"),
+  };
+  const status = validateForm(body);
+  formStatus.innerHTML = "";
+  if (typeof status === "string") {
+    const statusMessagesArray = status.split("=");
+    statusMessagesArray.forEach(statusMsg => {
+      const spanMsg = document.createElement("span");
+      spanMsg.innerText = statusMsg;
+      spanMsg.style.display = "block";
+      formStatus.appendChild(spanMsg);
+    });
+    return;
+  }
+  fetch(endpoint, {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then(res => {
+      console.log(res);
+      contactForm.reset();
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 // toggle navbar

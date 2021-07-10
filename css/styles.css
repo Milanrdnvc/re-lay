@@ -486,6 +486,12 @@ header .blur-bg.active {
   position: relative;
   text-align: center;
 }
+.contact .g-recaptcha {
+  margin-top: 1rem;
+}
+.contact .g-recaptcha div {
+  margin: auto;
+}
 .contact__wrapper {
   padding: 1.1rem;
 }
@@ -495,6 +501,13 @@ header .blur-bg.active {
 }
 .contact__form {
   margin-bottom: 3rem;
+}
+.contact__status {
+  margin-top: 3rem;
+}
+.contact__status span {
+  margin-top: 0.5rem;
+  color: #9d261d;
 }
 .contact__personal-info, .contact__business-info, .contact__message {
   display: flex;

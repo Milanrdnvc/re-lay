@@ -560,6 +560,13 @@ header .blur-bg.active {
   position: relative;
   text-align: center;
 
+  .g-recaptcha {
+    margin-top: 1rem;
+    div {
+      margin: auto;
+    }
+  }
+
   &__wrapper {
     padding: 1.1rem;
   }
@@ -571,6 +578,15 @@ header .blur-bg.active {
 
   &__form {
     margin-bottom: 3rem;
+  }
+
+  &__status {
+    margin-top: 3rem;
+
+    span {
+      margin-top: 0.5rem;
+      color: #9d261d;
+    }
   }
 
   &__personal-info,
