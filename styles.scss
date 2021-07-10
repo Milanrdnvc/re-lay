@@ -634,6 +634,7 @@ header .blur-bg.active {
 
     & > svg {
       transition: filter 250ms ease-in-out;
+      width: 70px;
     }
 
     & > svg:hover {
