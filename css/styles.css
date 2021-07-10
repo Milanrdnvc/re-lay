@@ -545,6 +545,9 @@ header .blur-bg.active {
 .contact a:nth-child(4) > svg {
   transform: rotateZ(-9deg);
 }
+.contact a {
+  text-decoration: none;
+}
 .contact a > svg {
   transition: filter 250ms ease-in-out;
 }

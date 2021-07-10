@@ -630,6 +630,8 @@ header .blur-bg.active {
   }
 
   a {
+    text-decoration: none;
+
     & > svg {
       transition: filter 250ms ease-in-out;
     }
