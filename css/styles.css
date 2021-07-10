@@ -623,7 +623,7 @@ header .blur-bg.active {
     transform: initial;
   }
   .contact img:nth-child(5) {
-    bottom: -30%;
+    bottom: -20%;
     right: 10%;
   }
 }
