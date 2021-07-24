@@ -638,22 +638,6 @@ header .blur-bg.active {
     }
   }
 
-  &__business-info {
-    margin-top: 1rem;
-
-    label:first-child {
-      margin-top: 0;
-    }
-  }
-
-  &__message {
-    margin-top: 1rem;
-
-    label:first-child {
-      margin-top: 0;
-    }
-  }
-
   button {
     color: var(--color-secondary);
     background-color: var(--color-primary);

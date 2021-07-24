@@ -552,18 +552,6 @@ header .blur-bg.active {
   font-family: "Montserrat", "sans-serif";
   font-size: var(--font-small);
 }
-.contact__business-info {
-  margin-top: 1rem;
-}
-.contact__business-info label:first-child {
-  margin-top: 0;
-}
-.contact__message {
-  margin-top: 1rem;
-}
-.contact__message label:first-child {
-  margin-top: 0;
-}
 .contact button {
   color: var(--color-secondary);
   background-color: var(--color-primary);
