@@ -54,7 +54,7 @@ h2 {
   font-size: var(--font-large);
   line-height: 1.3;
   text-transform: uppercase;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 6rem 0;
 }
 
 h3 {
@@ -380,8 +380,8 @@ header .blur-bg.active {
     padding: 1.1rem;
   }
 
-  &__cards {
-    margin-top: 3rem;
+  &__title {
+    margin-bottom: 6rem;
   }
 
   &__card-paragraph {
@@ -434,6 +434,10 @@ header .blur-bg.active {
   @media (min-width: 950px) {
     margin: 0 0 10rem 0;
 
+    &__title {
+      margin-bottom: 3rem;
+    }
+
     &__wrapper {
       max-width: 1600px;
       margin: 0 auto;
@@ -444,7 +448,6 @@ header .blur-bg.active {
       width: 100%;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 10rem;
     }
 
     &__card {
@@ -468,6 +471,7 @@ header .blur-bg.active {
 
   &__title {
     color: var(--color-tertiary);
+    margin-bottom: 4rem;
   }
 
   &__cards {
@@ -575,6 +579,7 @@ header .blur-bg.active {
   &__title {
     font-size: calc(var(--font-large) - 3px);
     color: var(--color-tertiary);
+    margin-bottom: 5rem;
   }
 
   &__form {

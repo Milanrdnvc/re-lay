@@ -84,6 +84,10 @@ contactForm.addEventListener("submit", async e => {
     .then(res => {
       console.log(res);
       contactForm.reset();
+      return res.json();
+    })
+    .then(data => {
+      console.log(data);
     })
     .catch(err => {
       console.log(err);
