@@ -15,7 +15,6 @@
     <link rel="icon" href="./pictures/logo.svg" />
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./script.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>RE:LAY</title>
   </head>
   <body>
@@ -264,10 +263,13 @@
               <label for="message">Vaša poruka</label>
               <textarea id="message" rows="5" name="message"></textarea>
             </div>
-            <div
-              class="g-recaptcha"
-              data-sitekey="6LedoYgbAAAAADn3y3y6v-KTh38ihTRpbrKYSjxa"
-            ></div>
+            <div class="contact__captcha">
+              <label for="captcha"
+                >Molimo Vas potvrdite da niste robot odgovorivši na sledeće
+                pitanje: <span>2 + 2</span></label
+              ><br />
+              <input id="captcha" type="text" name="captcha" />
+            </div>
             <button type="submit">Pošalji</button>
             <p class="contact__status"></p>
           </form>

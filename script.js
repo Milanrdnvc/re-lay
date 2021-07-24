@@ -18,7 +18,7 @@ function parallax(e) {
   });
 }
 
-function validateForm({ name, surname, email, company, message }) {
+function validateForm({ name, surname, email, company, message, captcha }) {
   let status = "";
   const mailRegEx =
     /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -47,6 +47,11 @@ function validateForm({ name, surname, email, company, message }) {
       lang === "sr"
         ? "Molimo Vas unesite pravilnu poruku="
         : "Please enter a valid message=";
+  if (captcha.answer !== captcha.userAnswer)
+    status +=
+      lang === "sr"
+        ? "Molimo Vas ispravno odgovorite na zadato pitanje="
+        : "Please answer the question correctly=";
   return status || true;
 }
 
@@ -55,12 +60,24 @@ contactForm.addEventListener("submit", async e => {
   e.preventDefault();
   const data = new FormData(e.target);
   const endpoint = "https://formspree.io/f/mnqlbqgp";
+  const captchaQuestion = document
+    .querySelector(".contact__captcha label")
+    .innerText.split(":")[1]
+    .trim()
+    .split("+");
+  const firstNum = Number(captchaQuestion[0]);
+  const secondNum = Number(captchaQuestion[1]);
+  const captcha = firstNum + secondNum;
+  const userCaptchaAnswer = Number(
+    document.querySelector(".contact__captcha input").value
+  );
   const body = {
     name: data.get("name"),
     surname: data.get("surname"),
     email: data.get("email"),
     company: data.get("company"),
     message: data.get("message"),
+    captcha: { answer: captcha, userAnswer: userCaptchaAnswer },
   };
   const status = validateForm(body);
   formStatus.innerHTML = "";
@@ -74,6 +91,12 @@ contactForm.addEventListener("submit", async e => {
     });
     return;
   }
+  const captchaQuestionSpan = document.querySelector(
+    ".contact__captcha label span"
+  );
+  const firstRandomNum = Math.round(Math.random());
+  const secondRandomNum = Math.round(Math.random());
+  captchaQuestionSpan.innerText = `${firstRandomNum} + ${secondRandomNum}`;
   fetch(endpoint, {
     method: "POST",
     body: JSON.stringify(body),

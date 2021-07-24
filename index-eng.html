@@ -262,10 +262,13 @@
               <label for="message">Your message</label>
               <textarea id="message" rows="5" name="message"></textarea>
             </div>
-            <div
-              class="g-recaptcha"
-              data-sitekey="6LedoYgbAAAAADn3y3y6v-KTh38ihTRpbrKYSjxa"
-            ></div>
+            <div class="contact__captcha">
+              <label for="captcha"
+                >Please confirm that you're not a robot by answering the
+                following question: <span>2 + 2</span></label
+              ><br />
+              <input id="captcha" type="text" name="captcha" />
+            </div>
             <button type="submit">Send</button>
             <p class="contact__status"></p>
           </form>

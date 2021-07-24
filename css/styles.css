@@ -489,11 +489,24 @@ header .blur-bg.active {
   position: relative;
   text-align: center;
 }
-.contact .g-recaptcha {
+.contact__captcha {
   margin-top: 1rem;
+  font-weight: 600;
 }
-.contact .g-recaptcha div {
-  margin: auto;
+.contact__captcha input {
+  margin: 0.5rem 0;
+  padding: 0.4rem 0.2rem;
+  outline: none;
+  border: none;
+  box-shadow: 0px 3px 23px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  font-family: "Montserrat", "sans-serif";
+  font-size: var(--font-small);
+}
+.contact__captcha label {
+  margin-top: 1rem;
+  text-align: left;
+  color: var(--color-tertiary);
 }
 .contact__wrapper {
   padding: 1.1rem;
