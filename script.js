@@ -94,8 +94,8 @@ contactForm.addEventListener("submit", async e => {
   const captchaQuestionSpan = document.querySelector(
     ".contact__captcha label span"
   );
-  const firstRandomNum = Math.round(Math.random());
-  const secondRandomNum = Math.round(Math.random());
+  const firstRandomNum = Math.round(Math.random() * 10);
+  const secondRandomNum = Math.round(Math.random() * 10);
   captchaQuestionSpan.innerText = `${firstRandomNum} + ${secondRandomNum}`;
   fetch(endpoint, {
     method: "POST",
